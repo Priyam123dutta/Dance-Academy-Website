@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* search about inhearit */
+
+.maincontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(Assets/navBack.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position-y: center;
+    border-bottom: 3px solid rgba(0,0,0,0.4);
+}
+
+.academy{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5vw;
+}
+
+.logo{
+    width: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.logo > img{
+    width: 100%;
+    min-width: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.name{
+    color: aqua;
+    width: 100px;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    margin-left: 1vw;
+    font-family: "Major Mono Display", monospace;
+}
+
+.navmenu{
+    width: 45vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 5vw;
+}
+
+.links{
+    display: flex;
+    flex-basis: 30vw;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.4vw;
+}
+
+#registration{
+    display: flex;
+    align-items: center;
+}
+
+#registration > button{
+    width: 5vw;
+    height: 2.5vw;
+    background-color: rgb(240, 50, 60); 
+    color: white;
+    font-size: 1.1vw;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 0px 0.5vw;
+}
+
+.menuicon{
+    width: 3vw;
+    height: auto;
+    display: none;
+}
+
+.menuicon > img{
+    width: 100%;
+}
+
+@media (max-width: 1024px)
+{
+    .links{
+        display: none;
+    }
+
+    .menuicon{
+        display: block;
+    }
+
+    .navmenu{
+        width: 20vw;
+    }
+}
+
+@media (max-width: 800px)
+{
+    #registration > button{
+        width: 5.5vw;
+        height: 3vw;
+    }
+
+    .name{
+        width: 70px;
+        font-size: 15px;
+    }
+
+    .logo{
+        width: 40px;
+    }
+    
+    .logo > img{
+        min-width: 35px;
+        border-radius: 15px;
+        border: 2px solid black;
+    }
+}
+
+@media (max-width: 600px)
+{
+    #registration{
+        display: none;
+    }
+    
+    .navmenu{
+        width: fit-content;
+    }
+
+    .menuicon{
+        width: 4vw;
+    }
+
+    .name{
+        width: 60px;
+        font-size: 12px;
+    }
+
+    .logo{
+        width: 30px;
+    }
+    
+    .logo > img{
+        min-width: 25px;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+}
+
+.main{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover{
+    width: 100%;
+    flex-basis: 34vw;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url(Assets/Cover.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cover > h1{
+    width:100%;
+    font-size: 3vw;
+    background: -webkit-linear-gradient(blue, royalblue, yellow, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px)
+{
+    .cover{
+        width: 100%;
+        flex-basis: 80vw;
+        background-size:cover;
+        background-position-x:center ;
+    }
+}
+
+.about{
+    width: 100%;
+    flex-basis: 35vw;
+    display: flex;
+    border-top: 5px solid rgba(0,0,0,0.6);
+    background-image: url(Assets/ContentBackground.jpg);
+    background-size: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about > h2{
+    width: 95%;
+    font-size: 2.5vw;
+    font-family: "LXGW WenKai TC", cursive;
+    font-style: italic;
+    background: -webkit-linear-gradient(rgb(194, 158, 50), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about > p{
+    width: 80%;
+    font-size: 1.5vw;
+    font-family: "Poetsen One", sans-serif;
+    text-align: justify;
+    background: -webkit-linear-gradient(45deg, rgb(19, 163, 24), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.missionbox{
+    width:100%;
+    flex-basis: 34vw;
+    display: flex;
+    border-top: 5px solid rgba(0,0,0, 0.9);
+    background-image: url(Assets/ContentBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.missionbox > h2{
+    width: 95%;
+    font-size: 2.5vw;
+    font-family: "LXGW WenKai TC", cursive;
+    font-style: italic;
+    background: -webkit-linear-gradient(rgb(194, 158, 50), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.missions{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(0 0 0 / 30%);
+    backdrop-filter: blur(10px);
+}
+
+.list > h3{
+    font-size: 2vw;
+    font-family: "LXGW WenKai TC", cursive;
+    background: -webkit-linear-gradient(rgb(194, 158, 50), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content > img{
+    width: 15vw;
+    margin: 1vw;
+    border-radius: 20px;
+    border: 1px solid crimson;
+}
+
+.content > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > p > span{
+    flex-basis: 80%;
+    font-size: 1.5vw;
+    font-family: "Poetsen One", sans-serif;
+    background: -webkit-linear-gradient(45deg, rgb(19, 163, 24), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px) 
+{
+    .missionbox{
+        flex-basis: 150vw;
+    }
+    
+    .missions{
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list{
+        width: 100%;
+        align-items: center;
+    }
+    .content > img{
+        width: 25vw;
+    }
+}
+
+.coursesbox{
+    width: 100%;
+    flex-basis: 60vw;
+    display: flex;
+    border-top: 5px solid rgba(0,0,0,0.9);
+    background-image: url(Assets/ContentBackground.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.coursesbox > h2{
+    width: 95%;
+    font-size: 2.5vw;
+    font-family: "LXGW WenKai TC", cursive;
+    font-style: italic;
+    background: -webkit-linear-gradient(rgb(194, 158, 50), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.courses{
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1vw;
+}
+
+.courselist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vw;
+    border-radius: 20px;
+    background-color: rgba(0 0 0 / 60%);
+    backdrop-filter: blur(10px);
+}
+
+.courselist > img{
+    height: 20vw;
+    border: 3px solid royalblue;
+    margin-bottom: 2vw;
+    border-radius: 10px;
+
+}
+
+.courseabout{
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+.courseabout > h3{
+    font-size: 2vw;
+    font-family: "Poetsen One", sans-serif;
+    background: -webkit-linear-gradient(rgb(194, 158, 50), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1vw;
+}
+
+.courseabout > p{
+    font-size: 1.5vw;
+    font-family: "Poetsen One", sans-serif;
+    background: -webkit-linear-gradient(45deg, rgb(19, 163, 24), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5vw;
+}
+
+.courseabout > span{
+    font-size: 1vw;
+    font-family: "Poetsen One", sans-serif;
+    background: -webkit-linear-gradient(45deg, rgb(19, 163, 24), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#apply{
+    width: 8vw;
+    height: 4vw;
+    background-color: rgb(229, 9, 20);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 1px rgba(229, 9, 20, 0.4);
+}
+
+button > span{
+    color: white;
+    font-size: 1vw;
+    font-weight: 600;
+    font-family: "Poetsen One", sans-serif;
+}
+
+button > img{
+    height: 3vw;
+}
+
+#viewmore{
+    width: 14vw;
+    height: 4vw;
+    background-color: rgb(229, 9, 20); 
+    color: white;
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: "Poetsen One", sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px)
+{
+    .coursesbox{
+        flex-basis: 280vw;
+    }
+
+    .courses{
+        flex-direction: column;
+        width: fit-content;
+        flex-basis: 140vw;
+        justify-content: space-between;
+        gap: 10vw;
+    }
+
+    .courselist{
+        width: 50vw;
+        height: 70vw;
+        align-items: center;
+    }
+
+    .courselist > img{
+        border: 1px solid royalblue;
+        height: 40vw;
+        margin-bottom: 4vw;
+    }
+
+    .courseabout{
+        margin-bottom: 4vw;
+    }
+    
+    .courseabout > h3{
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+    
+    .courseabout > p{
+        font-size: 2.5vw;
+        margin-bottom: 1.5vw;
+    }
+    
+    .courseabout > span{
+        font-size: 2vw;
+    }
+    
+    #apply{
+        width: 16vw;
+        height: 8vw;
+    }
+    
+    button > span{
+        font-size: 2vw;
+    }
+    
+    button > img{
+        height: 4vw;
+    }
+    
+    #viewmore{
+        width: 25vw;
+        height: 10vw;
+        font-size: 3vw;
+    }
+}
+
+.gallery{
+    width: 100%;
+    flex-basis: 165vw;
+    display: flex;
+    border-top: 5px solid rgba(0,0,0,0.9);
+    background-image: url(Assets/ContentBackground.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.gallery > h2{
+    width: 95%;
+    font-size: 2.5vw;
+    font-family: "LXGW WenKai TC", cursive;
+    font-style: italic;
+    background: -webkit-linear-gradient(rgb(194, 158, 50), rgb(54, 150, 209));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.imageborder{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+.imagebox{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: 100px;
+    margin: 10px;
+    color: white;
+}
+
+.images{
+    background-size: 100% 100%;
+}
+
+#image1{
+    grid-area: 1/ 1/ 6/ 8;
+}
+
+#image4{
+    grid-area: 1/ 8/ 7/ 11;
+}
+
+#image6{
+    grid-area: 6/ 1/ 11/ 3;
+}
+
+#image3{
+    grid-area: 6/ 3/ 10/ 8;
+}
+
+#image11{
+    grid-area: 7/ 8/ 10/ 11;
+}
+
+#image10{
+    grid-area: 10/ 3/ 15/11;
+}
+
+#image8{
+    grid-area: 11/ 1/ 16/ 3;
+}
+
+#image2{
+    grid-area: 15/ 3/ 19/ 8;
+}
+
+#image9{
+    grid-area: 15/ 8/ 18/ 11;
+}
+
+#image12{
+    grid-area: 16/ 1/ 22/ 3;
+}
+
+#image5{
+    grid-area: 19/ 3/ 22/ 8;
+}
+
+#image7{
+    grid-area: 18/ 8/ 22/ 11;
+}
+
