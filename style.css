@@ -83,18 +83,16 @@
     height: 2.5vw;
     background-color: rgb(240, 50, 60); 
     color: white;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 2px solid black;
     cursor: pointer;
     margin: 0px 0.5vw;
 }
 
 .menuicon{
-    width: 3vw;
-    height: auto;
     display: none;
 }
 
@@ -110,27 +108,41 @@
 
     .menuicon{
         display: block;
+        width: 3vw;
+        height: auto;
     }
 
     .navmenu{
         width: 20vw;
+    }
+
+    #registration > button{
+        width: 5.5vw;
+        height: 3vw;
     }
 }
 
 @media (max-width: 800px)
 {
     #registration > button{
-        width: 5.5vw;
-        height: 3vw;
+        width: 6vw;
+        height: 4vw;
+        font-size: 1.5vw;
+    }
+
+    .menuicon{
+        display: block;
+        width: 4vw;
+        height: auto;
     }
 
     .name{
         width: 70px;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .logo{
-        width: 40px;
+        width: 50px;
     }
     
     .logo > img{
@@ -151,16 +163,17 @@
     }
 
     .menuicon{
-        width: 4vw;
+        width: 6vw;
+        height: auto;
     }
 
     .name{
-        width: 60px;
-        font-size: 12px;
+        width: 70px;
+        font-size: 14px;
     }
 
     .logo{
-        width: 30px;
+        width: 35px;
     }
     
     .logo > img{
@@ -197,23 +210,13 @@
     -webkit-text-fill-color: transparent;
 }
 
-@media (max-width: 600px)
-{
-    .cover{
-        width: 100%;
-        flex-basis: 80vw;
-        background-size:cover;
-        background-position-x:center ;
-    }
-}
-
 .about{
     width: 100%;
     flex-basis: 35vw;
     display: flex;
     border-top: 5px solid rgba(0,0,0,0.6);
     background-image: url(Assets/ContentBackground.jpg);
-    background-size: 100%;
+    background-size: cover;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -237,6 +240,36 @@
     background: -webkit-linear-gradient(45deg, rgb(19, 163, 24), rgb(54, 150, 209));
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px)
+{
+    .cover{
+        width: 100%;
+        flex-basis: 80vw;
+        background-size:cover;
+        background-position-x:center ;
+    }
+
+    .cover > h1{
+        width:100%;
+        font-size: 8vw;
+        background: -webkit-linear-gradient(blue, royalblue, yellow, red);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .about{
+        flex-basis: 90vw;
+    }
+
+    .about > h2{
+        font-size: 5vw;
+    }
+
+    .about > p{
+        font-size: 2.5vw;
+    }
 }
 
 .missionbox{
@@ -317,11 +350,14 @@
 @media (max-width: 600px) 
 {
     .missionbox{
-        flex-basis: 150vw;
+        flex-basis: 230vw;
     }
-    
+    .missionbox > h2{
+        font-size: 5vw;
+    }
+
     .missions{
-        width: 30%;
+        width: 60%;
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -337,8 +373,17 @@
         width: 100%;
         align-items: center;
     }
+
+    .list > h3{
+        font-size: 4vw;
+    }
+
     .content > img{
-        width: 25vw;
+        width: 40vw;
+    }
+
+    .content > p > span{
+        font-size: 3vw;
     }
 }
 
@@ -463,64 +508,70 @@ button > img{
 @media (max-width: 600px)
 {
     .coursesbox{
-        flex-basis: 280vw;
+        flex-basis: 330vw;
     }
 
     .courses{
         flex-direction: column;
-        width: fit-content;
-        flex-basis: 140vw;
-        justify-content: space-between;
-        gap: 10vw;
+        width: 80%;
+        flex-basis: 280vw;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .coursesbox > h2{
+        font-size: 5vw;
     }
 
     .courselist{
-        width: 50vw;
-        height: 70vw;
+        width: 80%;
+        height: 90vw;
         align-items: center;
     }
 
     .courselist > img{
         border: 1px solid royalblue;
-        height: 40vw;
+        width: 60vw;
+        height: 50vw;
         margin-bottom: 4vw;
     }
 
     .courseabout{
-        margin-bottom: 4vw;
+        margin-bottom: 6vw;
     }
     
     .courseabout > h3{
-        font-size: 3vw;
+        font-size: 4vw;
         margin-bottom: 2vw;
     }
     
     .courseabout > p{
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         margin-bottom: 1.5vw;
     }
     
     .courseabout > span{
-        font-size: 2vw;
+        font-size: 3vw;
     }
     
     #apply{
-        width: 16vw;
-        height: 8vw;
+        width: 25vw;
+        height: 10vw;
+        border-radius: 10px;
     }
     
     button > span{
-        font-size: 2vw;
+        font-size: 3vw;
     }
     
     button > img{
-        height: 4vw;
+        height: 8vw;
     }
     
     #viewmore{
-        width: 25vw;
+        width: 30vw;
         height: 10vw;
-        font-size: 3vw;
+        font-size: 4vw;
     }
 }
 
@@ -563,6 +614,49 @@ button > img{
     grid-auto-rows: 100px;
     margin: 10px;
     color: white;
+}
+
+@media (max-width: 850px)
+{
+    .imageborder
+    {
+        width: 85%;
+    }
+    
+    .imagebox{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        gap: 10px;
+        margin: 10px;
+        color: white;
+    }
+
+    .images{
+        width:100%;
+        flex-basis: 60vw;
+    }
+
+    #image4{
+        flex-basis: 100vw;
+    }
+
+    #image6{
+        flex-basis: 100vw;
+    }
+
+    #image7{
+        flex-basis: 100vw;
+    }
+
+    #image8{
+        flex-basis: 100vw;
+    }
+
+    #image12{
+        flex-basis: 100vw;
+    }
 }
 
 .images{
