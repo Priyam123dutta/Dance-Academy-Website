@@ -757,6 +757,10 @@ button > img{
 
 @media (max-width: 600px)
 {
+    .gallery{
+        flex-basis: 990vw;
+    }
+
     .imgdescription{
         font-size: 2.8vw;
     }
